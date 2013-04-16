@@ -4,18 +4,19 @@
 #        2013/04/17 Dennis Create
 ################################################################################
 
-CC=gcc
+CC = gcc
+CFLAGS = -I../lib -Wall
 
 TARGET=daytimetcpcli daytimetcpcliv6
 
-all: $(TARGET)
+all: ${TARGET}
 
 daytimetcpcli: daytimetcpcli.c error.c
-	$(CC) -o $@ $^
+	${CC} ${CFLAGS} -o $@ $^
 
 daytimetcpcliv6: daytimetcpcliv6.c error.c
-	$(CC) -o $@ $^
+	${CC} ${CFLAGS} -o $@ $^
 
 .PHONY: clean
 clean:
-	rm -f *.o $(TARGET)
+	rm -f *.o ${TARGET}
