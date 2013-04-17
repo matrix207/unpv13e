@@ -6,6 +6,7 @@ LIBS = ../libunp.a -lpthread
 
 LIBUNP_NAME = ../libunp.a
 
-LIB_OBJS = error.o wrapsock.o
+LIB_OBJS = error.o wrapsock.o str_echo.o writen.o wrapunix.o wraplib.o str_cli.o \
+           readline.o wrapstdio.o
 
 CLEANFILES = *.o *.a tags

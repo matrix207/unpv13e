@@ -5,21 +5,14 @@
 ################################################################################
 include ../Make.defines
 
-PROGS = daytimetcpcli daytimetcpcliv6 daytimetcpsrv \
-        byteorder
+PROGS = tcpserv tcpcli
 
 all: ${PROGS}
 
-daytimetcpcli: daytimetcpcli.c 
+tcpserv: tcpserv.c
 	${CC} ${CFLAGS} -o $@ $^ ${LIBS}
 
-daytimetcpcliv6: daytimetcpcliv6.c 
-	${CC} ${CFLAGS} -o $@ $^ ${LIBS}
-
-daytimetcpsrv: daytimetcpsrv.c
-	${CC} ${CFLAGS} -o $@ $^ ${LIBS}
-
-byteorder: byteorder.c
+tcpcli: tcpcli.c
 	${CC} ${CFLAGS} -o $@ $^ ${LIBS}
 
 .PHONY: clean
