@@ -3,20 +3,21 @@
 # History:
 #        2013/04/17 Dennis Create
 ################################################################################
+include ../Make.defines
 
-CC = gcc
-CFLAGS = -I../lib -Wall
+PROGS = daytimetcpcli daytimetcpcliv6 daytimetcpsrv
 
-TARGET=daytimetcpcli daytimetcpcliv6
+all: ${PROGS}
 
-all: ${TARGET}
+daytimetcpcli: daytimetcpcli.c 
+	${CC} ${CFLAGS} -o $@ $^ ${LIBS}
 
-daytimetcpcli: daytimetcpcli.c error.c
-	${CC} ${CFLAGS} -o $@ $^
+daytimetcpcliv6: daytimetcpcliv6.c 
+	${CC} ${CFLAGS} -o $@ $^ ${LIBS}
 
-daytimetcpcliv6: daytimetcpcliv6.c error.c
-	${CC} ${CFLAGS} -o $@ $^
+daytimetcpsrv: daytimetcpsrv.c
+	${CC} ${CFLAGS} -o $@ $^ ${LIBS}
 
 .PHONY: clean
 clean:
-	rm -f *.o ${TARGET}
+	rm -f ${PROGS} ${CLEANFILES}

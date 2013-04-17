@@ -1,0 +1,11 @@
+# "make" is executed in all the subdirectories of this directory
+
+CC = gcc
+CFLAGS  = -I../lib -g -o2 -D_REENTRANT -Wall
+LIBS = ../libunp.a -lpthread
+
+LIBUNP_NAME = ../libunp.a
+
+LIB_OBJS = error.o wrapsock.o
+
+CLEANFILES = *.o *.a tags
