@@ -7,6 +7,7 @@ LIBS = ../libunp.a -lpthread
 LIBUNP_NAME = ../libunp.a
 
 LIB_OBJS = error.o wrapsock.o str_echo.o writen.o wrapunix.o wraplib.o str_cli.o \
-           readline.o wrapstdio.o
+           readline.o wrapstdio.o tcp_listen.o tcp_connect.o signal.o readn.o \
+		   write_fd.o read_fd.o
 
-CLEANFILES = *.o *.a tags
+CLEANFILES = *.o *.a tags cscope.out
