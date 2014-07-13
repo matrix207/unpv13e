@@ -1,0 +1,23 @@
+############################################
+# Create by Dennis 2014-06-11
+############################################
+lib/*.o
+*.a
+*.tar.gz
+*.swp
+
+server/client
+server/serv01
+server/serv02
+server/serv05
+
+tcpcliserv/tcpcli
+tcpcliserv/tcpserv
+
+intro/byteorder
+intro/daytimetcpcli
+intro/daytimetcpcliv6
+intro/daytimetcpsrv
+
+!.gitkeep
+
